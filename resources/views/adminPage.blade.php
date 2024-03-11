@@ -13,9 +13,9 @@
 
             <div class="card">
                 <div class="card-header">
-                    <a href="{{route('showCategory')}}" style="float: right;"><button class="btn btn-success btn-default" style="margin-left: 6px">إضافة صنف</button></a>
-                    <a href="" style="float: right;"><button class="btn btn-info btn-default" style="margin-left: 6px">عرض الوجبات</button></a>
-                    <a href="" style="float: right;"><button class="btn btn-primary btn-default" style="margin-left: 6px">إضافة وجبة</button></a>
+                    <a href="{{route('category.index')}}" style="float: right;"><button class="btn btn-success btn-default" style="margin-left: 6px">إضافة صنف</button></a>
+                    <a href="{{route('meal.index')}}" style="float: right;"><button class="btn btn-info btn-default" style="margin-left: 6px">عرض الوجبات</button></a>
+                    <a href="{{route('meal.create')}}" style="float: right;"><button class="btn btn-primary btn-default" style="margin-left: 6px">إضافة وجبة</button></a>
                 </div>
             </div>
 

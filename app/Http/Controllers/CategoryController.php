@@ -11,10 +11,6 @@ class CategoryController extends Controller
         return view('categories.categoryPage', get_defined_vars());
     }
 
-    public function show()
-    {
-
-    }
 
     public function store(Request $request)
     {
@@ -25,6 +21,17 @@ class CategoryController extends Controller
             'name' => $request->name,
         ]);
         return back()->with('message', 'تم إضافة صنف جديد');
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|string|min:2|max:20|unique:categories',
+        ]);
+        $category = Category::findOrFail($id);
+        $category->update($request->all());
+
+        return back()->with('message', 'تم تعديل الصنف بنجاح');
     }
 
     public function destroy($id)
